@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ender.endsearch.MainScene">
+   <children>
+      <VBox layoutX="29.0" layoutY="2.0" minHeight="400.0" minWidth="600.0" prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: steelblue;">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="EndFinder">
+                     <font>
+                        <Font name="Montserrat ExtraBold" size="36.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="552.5" prefWidth="900.0">
+               <children>
+                  <VBox prefHeight="300.0" spacing="15.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Первый бросок" wrappingWidth="192.32421875">
+                           <font>
+                              <Font name="Montserrat SemiBold" size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox alignment="CENTER_LEFT" spacing="90.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="X- координата">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Z - координата">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Угол" wrappingWidth="102.626953125">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="26.0" prefWidth="480.0" spacing="30.0">
+                           <children>
+                              <TextField fx:id="text1" />
+                              <TextField fx:id="text2" />
+                              <TextField fx:id="text3" />
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Второй бросок">
+                           <font>
+                              <Font name="Montserrat SemiBold" size="22.0" />
+                           </font>
+                        </Text>
+                        <HBox prefHeight="25.0" prefWidth="500.0" spacing="90.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="X- координата">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Z - координата">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Угол" wrappingWidth="105.626953125">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="26.0" prefWidth="480.0" spacing="30.0">
+                           <children>
+                              <TextField fx:id="text4" />
+                              <TextField fx:id="text5" />
+                              <TextField fx:id="text6" />
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#calcCoor" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: steelblue; -fx-text-fill: black; -fx-font-style: bold; -fx-font-size: 16;" text="Calculate!">
+                           <font>
+                              <Font name="Montserrat ExtraLight" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="40.0" />
+                           </VBox.margin>
+                        </Button>
+                        <HBox spacing="32.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Координаты:">
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="22.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="field1" editable="false" />
+                              <TextField fx:id="field2" editable="false" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox id="HBox" alignment="CENTER" fillHeight="false" maxHeight="20.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="11.0" fx:id="x3" />
+               </font>
+               <textFill>
+                  <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+               </textFill>
+            </Label>
+            <Pane prefHeight="20.0" prefWidth="700.0" style="-fx-background-color: black;" HBox.hgrow="ALWAYS" />
+            <Label font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
